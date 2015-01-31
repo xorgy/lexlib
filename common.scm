@@ -8,3 +8,6 @@
   (if (<= a b)
       (and (>= c a) (<= c b))
       (in-range? b a c)))
+
+(define (suffix-number n s)
+  (string-append (number->string n) s))
