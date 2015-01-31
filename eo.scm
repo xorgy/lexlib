@@ -1,3 +1,4 @@
+(load "common.scm")
+
 (define (ordinal n)
-  (string-append
-   (number->string n) "a"))
+  (suffix-number n "a"))
