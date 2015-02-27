@@ -13,3 +13,10 @@
          ((eqv? final 3) (suffix-number n "rd"))
          ((in-range? 4 9 final) (suffix-number n "th"))))
       (error "In en_CA.UTF-8, ordinals must be integers.")))
+
+(define (times n)
+  (if (integer? n)
+        (cond
+         ((eqv? n 1) (suffix-number n " time"))
+         (else (suffix-number n " times")))
+      (error "In en_CA.UTF-8, multiples must be integers.")))
